@@ -19,5 +19,6 @@
     </Picker>
     <!-- This does not work with MauiXamlInflater = SoureGen, but works without -->
     <Picker ItemsSource="{Static local:MainPageViewModel.EnumValues }" SelectedItem="{Binding Selected}"/>
+    <Picker ItemsSource="{Static local:MainPageViewModel.PrimitiveValues }" SelectedItem="{Binding SelectedString}"/>
   </VerticalStackLayout>
 </ContentPage>

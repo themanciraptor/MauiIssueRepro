@@ -24,7 +24,17 @@ namespace StaticEnumSourceOnPicker
       }
     } = MyEnum.None;
 
+    public MyEnum SelectedString
+    {
+      get; set
+      {
+        field = value;
+        PropertyChanged?.Invoke( this, new( nameof( Selected ) ) );
+      }
+    } = MyEnum.None;
+
     public static IReadOnlyList<MyEnum> EnumValues => Enum.GetValues<MyEnum>();
+    public static IReadOnlyList<string> PrimitiveValues => ["first","second","third"];
   }
 
   public enum MyEnum
